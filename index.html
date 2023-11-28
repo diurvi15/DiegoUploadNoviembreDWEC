@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Sujetos de Investigación</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Gestión de Sujetos de Investigación</h1>
+        <button id="toggleButton">Cambiar Vista</button>
+        <button id="formToggleButton" style="display: none;">Mostrar Formulario</button>
+        <button id="returnToListButton" style="display: none;">Volver al Listado</button>
+    </header>
+
+  <div id="content">  
+    <div id="info">
+      <div id="subjectList"></div>
+      <form id="subjectForm">
+        <label for="nombreInput">Nombre:</label>
+        <input type="text" id="nombreInput" name="nombreInput" required>
+        <label for="tipoInput">Tipo:</label>
+        <select id="tipoInput" name="tipoInput" required>
+          <option value="descargado">Descargado</option>
+          <option value="vivo">Vivo</option>
+        </select>
+        <label for="viveInput">Dónde Vive:</label>
+        <input type="text" id="viveInput" name="viveInput">
+        <label for="desdeInput">Desde:</label>
+        <input type="date" id="desdeInput" name="desdeInput" placeholder="Fecha desconocida">
+        <label for="culpabilidadInput">Posible Culpabilidad:</label>
+        <select id="culpabilidadInput" name="culpabilidadInput" required>
+            <option value="Posible Cooperador">Posible Cooperador</option>
+            <option value="Colaborador">Colaborador</option>
+            <option value="Delincuente">Delincuente</option>
+          </select>
+        <label for="urlInput">URL de la imagen:</label>
+        <input type="text" id="urlInput" name="urlInput">
+        <label for="comentariosInput">Comentarios:</label>
+        <textarea id="comentariosInput" name="comentariosInput"></textarea>
+        <button type="button" id="agregarSujetoButton">Agregar Sujeto</button>
+        <button type="button" id="modificarSujetoButton">Modificar Sujeto</button>
+      </form>
+    </div>
+
+    <div id="lakeview"></div>
+  </div>
+
+</body>
+</html>
